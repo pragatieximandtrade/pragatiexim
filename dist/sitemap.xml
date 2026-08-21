@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Company Routes -->
+  <url><loc>https://pragatiexim.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://pragatiexim.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/products</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://pragatiexim.com/quality</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/customisation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/packaging</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/industries</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/export</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/privacy-policy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://pragatiexim.com/terms</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Product Pages -->
+  <url><loc>https://pragatiexim.com/products/turmeric-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/ginger-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/coriander-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/cumin-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/garlic-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/red-chilli-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/black-pepper-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/white-pepper-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/clove-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/nutmeg-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/cinnamon-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/cardamom-powder</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/garam-masala</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/fry-masala</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/biryani-masala</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/regional-masalas</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://pragatiexim.com/products/custom-spice-blends</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- SEO Keyword Landing Pages -->
+  <url><loc>https://pragatiexim.com/spice-powder-manufacturer-india</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/spice-exporter-india</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/spice-supplier-gujarat</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/spice-supplier-surat</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/bulk-spice-supplier</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/custom-spice-blends</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://pragatiexim.com/industrial-spice-supplier</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- Knowledge Base / Blog Articles -->
+  <url><loc>https://pragatiexim.com/blog/how-to-choose-a-reliable-bulk-spice-supplier</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/why-batch-consistency-matters-in-food-manufacturing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/powdered-spices-for-food-manufacturers-what-to-consider</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/how-particle-size-affects-spice-applications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/choosing-the-right-spice-blend-for-food-production</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/bulk-spice-packaging-what-b2b-buyers-should-know</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://pragatiexim.com/blog/indian-spice-supply-for-international-food-businesses</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>

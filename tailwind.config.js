@@ -6,12 +6,76 @@ export default {
   ],
   theme: {
     extend: {
-      gridTemplateColumns:{
-        'auto':'repeat(auto-fill, minmax(200px, 1fr))'
+      colors: {
+        brand: {
+          green: {
+            50: '#f0f7f4',
+            100: '#dbeee5',
+            200: '#b8decb',
+            300: '#8ac7aa',
+            400: '#5ba984',
+            500: '#398d66',
+            600: '#257056',
+            700: '#1b523f',
+            800: '#143d2e',
+            900: '#0d2b20',
+            950: '#071812',
+          },
+          spice: {
+            50: '#fcf6f0',
+            100: '#f7ebdE',
+            200: '#eed3bd',
+            300: '#e1b494',
+            400: '#d08c64',
+            500: '#b86230',
+            600: '#9e4c22',
+            700: '#7a3e1d',
+            800: '#61321b',
+            900: '#4a210d',
+          },
+          gold: {
+            50: '#fffbeb',
+            100: '#fef3c7',
+            200: '#fde68a',
+            300: '#fcd34d',
+            400: '#fbbf24',
+            500: '#f59e0b',
+            600: '#d97706',
+            700: '#b45309',
+            800: '#92400e',
+            900: '#78350f',
+          },
+          ivory: {
+            50: '#fdfcf9',
+            100: '#f8f6f0',
+            200: '#eeebe1',
+            300: '#e2ddd0',
+            400: '#c5beae',
+          },
+          charcoal: {
+            50: '#f6f7f7',
+            100: '#e5e7e6',
+            200: '#c9cdcc',
+            300: '#a3aaa8',
+            400: '#77827f',
+            500: '#5c6764',
+            600: '#475450',
+            700: '#2d3834',
+            800: '#1e2623',
+            900: '#121816',
+            950: '#0a0e0c',
+          },
+        },
       },
-      colors:{
-        'primary':'#5F6FFF'
-      }
+      fontFamily: {
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Inter', 'Manrope', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        'subtle': '0 2px 10px rgba(0, 0, 0, 0.04)',
+        'premium': '0 10px 30px -5px rgba(13, 43, 32, 0.08), 0 4px 12px -2px rgba(13, 43, 32, 0.04)',
+        'premium-lg': '0 20px 40px -10px rgba(13, 43, 32, 0.12), 0 8px 16px -4px rgba(13, 43, 32, 0.06)',
+      },
     },
   },
   plugins: [],

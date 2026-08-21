@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect x="4" y="4" width="112" height="112" rx="28" fill="#071812" stroke="url(#luxuryGoldGradFav)" stroke-width="4"/>
+  <rect x="14" y="14" width="92" height="92" rx="22" stroke="#D97706" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.8"/>
+  <path d="M 25 75 A 40 40 0 0 1 95 45" stroke="url(#luxuryGoldGradFav)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 42 30 L 42 90 C 42 90, 48 90, 50 86 L 50 30 Z" fill="url(#luxuryGoldGradFav)"/>
+  <path d="M 46 30 C 68 28, 86 40, 86 54 C 86 68, 68 78, 46 76 L 46 64 C 62 65, 73 58, 73 54 C 73 48, 62 40, 46 41 Z" fill="url(#luxuryGoldGradFav)"/>
+  <path d="M 60 48 L 62 52 L 66 54 L 62 56 L 60 60 L 58 56 L 54 54 L 58 52 Z" fill="#FBBF24"/>
+  <path d="M 30 40 C 24 35, 20 45, 30 52 C 35 48, 32 40, 30 40 Z" fill="#D97706"/>
+  <polygon points="90,26 93,31 98,31 94,35 96,40 90,37 84,40 86,35 82,31 87,31" fill="#FBBF24"/>
+  <circle cx="28" cy="85" r="3.5" fill="#FBBF24"/>
+  <defs>
+    <linearGradient id="luxuryGoldGradFav" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="30%" stop-color="#F59E0B"/>
+      <stop offset="70%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+  </defs>
+</svg>

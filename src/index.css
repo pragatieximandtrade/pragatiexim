@@ -1,23 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* {
-    font-family: Outfit;
+@layer base {
+  html {
+    color-scheme: light;
+  }
+  
+  body {
+    @apply bg-brand-ivory-50 text-brand-charcoal-900 font-sans antialiased;
+    background-color: #fdfcf9;
+  }
+
+  h1, h2, h3, .font-serif-heading {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
 }
 
-.active hr {
-    @apply block
+/* Hide scrollbar utility for clean touch/horizontal scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
-@media (max-width:740px) {
-    .active  p{
-       @apply text-white bg-primary
-    }
+.no-scrollbar {
+  -ms-overflow-style: none !important;  /* IE and Edge */
+  scrollbar-width: none !important;  /* Firefox */
 }
 
-::-webkit-scrollbar {
-    @apply hidden
+/* Glassmorphic and subtle depth utilities */
+.glass-nav {
+  background: rgba(253, 252, 249, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-dark {
+  background: rgba(13, 43, 32, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.spice-gradient-overlay {
+  background: linear-gradient(180deg, rgba(7, 24, 18, 0.82) 0%, rgba(13, 43, 32, 0.9) 100%);
+}
+
+.spice-pattern-bg {
+  background-image: radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
