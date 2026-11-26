@@ -1,7 +1,7 @@
 import { COMPANY } from '../data/company';
 
 const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
-const DEFAULT_ACCESS_KEY = 'e704c8cd-49cc-42b6-bed7-e0eb0ac54543';
+const DEFAULT_ACCESS_KEY = 'f3ca7a4a-a1aa-44b1-a2e7-7a4039c2a022';
 
 /**
  * Submit a B2B inquiry or sample request via Web3Forms.

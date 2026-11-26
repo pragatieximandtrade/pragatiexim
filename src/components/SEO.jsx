@@ -80,12 +80,19 @@ export default function SEO({
       url: `${siteUrl}/images/logo_gmp.png`
     },
     description: 'Exporter of premium herbal powders and standardized botanical extracts from India to international B2B buyers.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: COMPANY.address.city,
-      addressRegion: COMPANY.address.state,
-      addressCountry: 'IN'
-    },
+    address: [
+      {
+        '@type': 'PostalAddress',
+        addressLocality: COMPANY.address.city,
+        addressRegion: COMPANY.address.state,
+        addressCountry: 'IN'
+      },
+      {
+        '@type': 'PostalAddress',
+        addressRegion: 'New Jersey',
+        addressCountry: 'US'
+      }
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: COMPANY.phone.india,

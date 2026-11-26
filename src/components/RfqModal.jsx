@@ -25,7 +25,10 @@ export default function RfqModal({ isOpen, onClose, initialProduct = null, initi
   const [formData, setFormData] = useState(INITIAL_FORM_STATE);
 
   useEffect(() => {
-    setErrorMsg('');
+    if (isOpen) {
+      setSubmitted(false);
+      setErrorMsg('');
+    }
     if (initialProduct) {
       setFormData(prev => ({
         ...prev,
@@ -88,7 +91,7 @@ export default function RfqModal({ isOpen, onClose, initialProduct = null, initi
             </h3>
           </div>
           <button
-            onClick={onClose}
+            onClick={handleReset}
             className="p-2 rounded-xl bg-forest-950 hover:bg-forest-800 text-gray-400 hover:text-white transition"
           >
             <X className="w-5 h-5" />
@@ -262,8 +265,16 @@ export default function RfqModal({ isOpen, onClose, initialProduct = null, initi
                 </button>
               </div>
 
-              <div className="text-[11px] text-forest-400 text-center flex items-center justify-center gap-2 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Standard MOQ is 50 KG. Direct B2B export supply from India.
+              <div className="text-[11px] text-forest-300 text-center space-y-1 pt-1">
+                <div className="flex items-center justify-center gap-2">
+                  <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Standard MOQ is 50 KG. Direct B2B export supply from India.
+                </div>
+                <div className="text-amber-300 font-medium">
+                  {COMPANY.phone.multilingualNote}{' '}
+                  <a href={COMPANY.phone.whatsappUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-200">
+                    WhatsApp {COMPANY.phone.indiaDisplay}
+                  </a>
+                </div>
               </div>
             </form>
           )}

@@ -13,7 +13,8 @@ export const COMPANY = {
     city: "Surat",
     state: "Gujarat",
     country: "India",
-    full: "Surat, Gujarat, India"
+    full: "Surat, Gujarat, India",
+    usa: "New Jersey, USA"
   },
   
   email: {
@@ -26,7 +27,9 @@ export const COMPANY = {
     indiaDisplay: "+91 7990966295",
     usa: "+1 (551) 689-5058",
     usaDisplay: "+1 (551) 689-5058",
-    whatsapp: "+917990966295"
+    whatsapp: "+917990966295",
+    whatsappUrl: "https://wa.me/917990966295",
+    multilingualNote: "You can call or WhatsApp us in your language."
   },
   
   website: "https://www.pragatiexim.com",

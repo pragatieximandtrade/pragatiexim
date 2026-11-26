@@ -29,10 +29,13 @@ export default function Footer({ onOpenRfq }) {
               Pragati Exim & Trade is an India-based B2B export company supplying USDA Organic Certified herbal powders and standardized botanical extracts to international buyers, nutraceutical manufacturers, and ingredient distributors worldwide.
             </p>
 
-            <div className="space-y-2 pt-2 text-sm text-ivory-300">
+            <div className="space-y-2.5 pt-2 text-sm text-ivory-300">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                <span>{COMPANY.address.full}</span>
+                <div className="space-y-0.5">
+                  <span className="block">India: {COMPANY.address.full}</span>
+                  <span className="block text-xs text-emerald-400">USA: {COMPANY.address.usa}</span>
+                </div>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-amber-400 shrink-0" />
@@ -40,14 +43,22 @@ export default function Footer({ onOpenRfq }) {
                   {COMPANY.email.primary}
                 </a>
               </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-amber-400 shrink-0" />
-                <div>
+              <div className="flex items-start gap-3">
+                <Phone className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+                <div className="space-y-0.5">
                   <a href={`tel:${COMPANY.phone.india}`} className="hover:text-amber-300 transition block">
                     India: {COMPANY.phone.indiaDisplay}
                   </a>
                   <a href={`tel:${COMPANY.phone.usa}`} className="hover:text-amber-300 transition block text-xs text-emerald-400">
                     USA: {COMPANY.phone.usaDisplay}
+                  </a>
+                  <a
+                    href={COMPANY.phone.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-xs text-amber-300 font-semibold hover:underline pt-1"
+                  >
+                    {COMPANY.phone.multilingualNote}
                   </a>
                 </div>
               </div>

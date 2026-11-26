@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Clock, Loader2, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Loader2, AlertCircle, MessageCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import { COMPANY } from '../data/company';
 import { HERBAL_POWDERS, BOTANICAL_EXTRACTS, ALL_PRODUCTS } from '../data/products';
@@ -295,21 +295,22 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Col 2: Company Contact Details & Hours */}
+          {/* Col 2: Company Contact Details & Locations */}
           <div className="lg:col-span-5 space-y-6">
             
-            {/* Headquarters Card */}
+            {/* Locations & Export Desk Card */}
             <div className="bg-forest-950 text-white rounded-3xl p-8 border border-forest-800 shadow-xl space-y-5">
               <h3 className="font-serif font-bold text-xl text-ivory-100 border-b border-forest-800 pb-3">
-                Export Headquarters
+                Global Locations & Export Desk
               </h3>
 
               <div className="space-y-4 text-sm text-forest-200">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                  <div>
+                  <div className="space-y-1">
                     <strong className="text-white block font-semibold">Pragati Exim & Trade</strong>
-                    <span>{COMPANY.address.full}</span>
+                    <div>India: {COMPANY.address.full}</div>
+                    <div className="text-emerald-300 font-medium">USA: {COMPANY.address.usa}</div>
                   </div>
                 </div>
 
@@ -325,28 +326,33 @@ export default function ContactPage() {
 
                 <div className="flex items-start gap-3">
                   <Phone className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
-                  <div>
-                    <strong className="text-white block font-semibold">Direct Telephone:</strong>
+                  <div className="space-y-1">
+                    <strong className="text-white block font-semibold">Direct Call & WhatsApp:</strong>
                     <a href={`tel:${COMPANY.phone.india}`} className="text-amber-300 hover:underline block">
                       India Desk: {COMPANY.phone.indiaDisplay}
                     </a>
                     <a href={`tel:${COMPANY.phone.usa}`} className="text-emerald-400 hover:underline block text-xs">
                       USA Desk: {COMPANY.phone.usaDisplay}
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-amber-400 shrink-0" />
-                  <div>
-                    <strong className="text-white block font-semibold">Business Hours:</strong>
-                    <span>Mon – Sat: 9:00 AM – 6:30 PM (IST)</span>
+                    <a
+                      href={COMPANY.phone.whatsappUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-1.5 px-3 py-1.5 rounded-lg bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-300 text-xs font-bold transition"
+                    >
+                      <MessageCircle className="w-3.5 h-3.5" /> Chat on WhatsApp
+                    </a>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-forest-800 text-xs text-forest-300">
-                International inquiries are monitored 24/7 across all global timezones.
+              <div className="pt-3 border-t border-forest-800 space-y-1.5 text-xs">
+                <div className="text-amber-300 font-bold">
+                  {COMPANY.phone.multilingualNote}
+                </div>
+                <div className="text-forest-300">
+                  International inquiries are monitored 24/7 across all global timezones.
+                </div>
               </div>
             </div>
 

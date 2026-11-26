@@ -12,7 +12,7 @@ export default function TrustStrip() {
             { icon: Award, title: "USDA Organic Certified", sub: "For Herbal Powders Range" },
             { icon: Globe, title: "International Export", sub: "Global Freight Support" },
             { icon: Anchor, title: "India-Based Export Partner", sub: "Surat, Gujarat Headquarters" },
-            { icon: Box, title: "USA Extract Inventory", sub: "Selected Stocked Extracts" }
+            { icon: Box, title: "USA Extract Inventory", sub: "New Jersey, USA Location" }
           ].map((item, index) => {
             const IconComponent = item.icon;
             return (

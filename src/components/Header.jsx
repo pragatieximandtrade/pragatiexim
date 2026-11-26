@@ -44,15 +44,19 @@ export default function Header({ onOpenRfq }) {
             <span className="flex items-center gap-1 text-ivory-200 font-medium whitespace-nowrap">
               <Package className="w-3.5 h-3.5 text-emerald-400" /> MOQ: <strong className="text-amber-300 font-bold">50 KG</strong>
             </span>
-            <span className="hidden lg:inline text-forest-700">•</span>
-            <span className="hidden lg:flex items-center gap-1 text-emerald-300 font-semibold whitespace-nowrap">
+            <span className="hidden xl:inline text-forest-700">•</span>
+            <span className="hidden xl:flex items-center gap-1 text-emerald-300 font-semibold whitespace-nowrap">
               <Globe2 className="w-3.5 h-3.5" /> Direct Export from India to Global B2B Buyers
             </span>
           </div>
 
-          <div className="flex items-center gap-4 text-[11px] sm:text-xs">
+          <div className="flex items-center flex-wrap justify-center gap-x-3 gap-y-1 xl:gap-4 text-[11px] sm:text-xs">
             <a href={`tel:${COMPANY.phone.india}`} className="hover:text-amber-300 transition flex items-center gap-1 whitespace-nowrap">
               <Phone className="w-3 h-3 text-amber-400" /> India: {COMPANY.phone.indiaDisplay}
+            </a>
+            <span className="text-forest-700">•</span>
+            <a href={`tel:${COMPANY.phone.usa}`} className="hover:text-emerald-300 transition flex items-center gap-1 whitespace-nowrap text-emerald-300 font-medium">
+              <Phone className="w-3 h-3 text-emerald-400" /> USA: {COMPANY.phone.usaDisplay}
             </a>
             <a href={`mailto:${COMPANY.email.primary}`} className="hover:text-amber-300 transition flex items-center gap-1 hidden md:flex whitespace-nowrap">
               <Mail className="w-3 h-3 text-amber-400" /> {COMPANY.email.primary}

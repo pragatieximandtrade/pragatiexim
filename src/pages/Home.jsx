@@ -133,7 +133,11 @@ export default function Home({ onOpenRfq }) {
                 <div className="bg-forest-950 p-3.5 rounded-xl border border-forest-800 text-xs space-y-1">
                   <div className="flex items-center justify-between text-ivory-100 font-semibold">
                     <span>Export Headquarters:</span>
-                    <span className="text-amber-300">{COMPANY.address.city}, Gujarat, India</span>
+                    <span className="text-amber-300">{COMPANY.address.full}</span>
+                  </div>
+                  <div className="flex items-center justify-between text-forest-200 font-medium">
+                    <span>USA Location:</span>
+                    <span className="text-emerald-300 font-semibold">{COMPANY.address.usa}</span>
                   </div>
                   <div className="flex items-center justify-between text-forest-300 text-[11px]">
                     <span>Commercial Model:</span>
@@ -623,6 +627,13 @@ export default function Home({ onOpenRfq }) {
                 Contact Export Desk
               </Link>
             </div>
+
+            <p className="text-xs text-amber-300 font-semibold">
+              {COMPANY.phone.multilingualNote}{' '}
+              <a href={COMPANY.phone.whatsappUrl} target="_blank" rel="noopener noreferrer" className="underline hover:text-amber-200">
+                WhatsApp: {COMPANY.phone.indiaDisplay}
+              </a>
+            </p>
           </div>
         </div>
       </section>

@@ -33,9 +33,15 @@ export default function AboutPage({ onOpenRfq }) {
             Supplying premium, quality-driven Herbal Powders and Standardized Botanical Extracts from India to international commercial buyers, nutraceutical manufacturers, and ingredient distributors.
           </p>
 
-          <div className="pt-2 flex items-center gap-2 text-xs text-amber-300 font-semibold">
-            <MapPin className="w-4 h-4 text-emerald-400" />
-            <span>Headquarters: {COMPANY.address.full}</span>
+          <div className="pt-2 flex flex-wrap items-center gap-3 text-xs text-amber-300 font-semibold">
+            <span className="flex items-center gap-1.5">
+              <MapPin className="w-4 h-4 text-emerald-400" />
+              India: {COMPANY.address.full}
+            </span>
+            <span className="text-forest-500">•</span>
+            <span className="text-emerald-300">
+              USA: {COMPANY.address.usa}
+            </span>
           </div>
         </div>
 
