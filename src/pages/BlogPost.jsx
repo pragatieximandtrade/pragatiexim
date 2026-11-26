@@ -27,6 +27,8 @@ export default function BlogPost({ onOpenRfq }) {
         description={blog.excerpt}
         canonicalUrl={`/resources/${blog.slug}`}
         ogImage={blog.image}
+        ogType="article"
+        article={blog}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Resources", url: "/resources" },

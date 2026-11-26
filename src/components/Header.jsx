@@ -96,11 +96,15 @@ export default function Header({ onOpenRfq }) {
                 PRODUCTS <ChevronDown className={`w-3.5 h-3.5 text-amber-400 transition-transform shrink-0 ${productsDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
 
-              {productsDropdownOpen && (
-                <div
-                  onMouseLeave={() => setProductsDropdownOpen(false)}
-                  className="absolute top-full left-1/2 -translate-x-1/2 w-[720px] bg-forest-950 text-white rounded-3xl shadow-2xl border border-forest-800 p-6 backdrop-blur-2xl animate-in fade-in slide-in-from-top-2 duration-200 z-50 space-y-4"
-                >
+              <div
+                onMouseLeave={() => setProductsDropdownOpen(false)}
+                aria-hidden={!productsDropdownOpen}
+                className={`absolute top-full left-1/2 -translate-x-1/2 w-[720px] bg-forest-950 text-white rounded-3xl shadow-2xl border border-forest-800 p-6 backdrop-blur-2xl transition-all duration-200 z-50 space-y-4 ${
+                  productsDropdownOpen
+                    ? 'opacity-100 visible pointer-events-auto translate-y-0'
+                    : 'opacity-0 invisible pointer-events-none -translate-y-1'
+                }`}
+              >
                   <div className="grid grid-cols-2 gap-6">
                     
                     {/* Left Column: Herbal Powders */}
@@ -215,8 +219,7 @@ export default function Header({ onOpenRfq }) {
 
                   </div>
                 </div>
-              )}
-            </div>
+              </div>
 
             <NavLink to="/certifications" className={navLinkClass}>CERTIFICATIONS</NavLink>
             <NavLink to="/export-markets" className={navLinkClass}>GLOBAL REACH</NavLink>

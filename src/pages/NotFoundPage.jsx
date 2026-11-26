@@ -10,6 +10,7 @@ export default function NotFoundPage() {
         title="Page Not Found (404)"
         description="The page you are looking for does not exist."
         canonicalUrl="/404"
+        noIndex={true}
       />
       <div className="text-6xl font-serif font-black text-forest-900">404</div>
       <h1 className="text-2xl font-serif font-bold text-gray-900">Page Not Found</h1>

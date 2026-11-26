@@ -309,10 +309,22 @@ export default function Home({ onOpenRfq }) {
                 <div className="pt-2">
                   <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Featured Extract Ranges:</div>
                   <div className="flex flex-wrap gap-2">
-                    {['Registered / Clinically Studied', 'Indigenous Range', 'Global Range', 'Berberine 97%', 'Curcumin 95% USP', 'Gymnemic Acid 75%', 'Resveratrol 98%'].map(item => (
-                      <span key={item} className="px-3 py-1 bg-[#F9F8F3] border border-gray-200 text-gray-800 text-xs font-semibold rounded-lg">
-                        {item}
-                      </span>
+                    {[
+                      { label: 'Registered / Clinically Studied', url: '/botanical-extracts?range=Registered+%2F+Clinically+Studied' },
+                      { label: 'Indigenous Range', url: '/botanical-extracts?range=Indigenous+Range' },
+                      { label: 'Global Range', url: '/botanical-extracts?range=Global+Range' },
+                      { label: 'Berberine 97%', url: '/botanical-extracts/berberine-berberis-aristata' },
+                      { label: 'Curcumin 95% USP', url: '/botanical-extracts/turmeric-curcumin' },
+                      { label: 'Gymnemic Acid 75%', url: '/botanical-extracts/gymnema' },
+                      { label: 'Resveratrol 98%', url: '/botanical-extracts/resveratrol' }
+                    ].map(item => (
+                      <Link
+                        key={item.label}
+                        to={item.url}
+                        className="px-3 py-1 bg-[#F9F8F3] hover:bg-emerald-100 border border-gray-200 hover:border-emerald-300 text-gray-800 hover:text-forest-950 text-xs font-semibold rounded-lg transition"
+                      >
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -616,7 +628,82 @@ export default function Home({ onOpenRfq }) {
       </section>
 
       {/* =========================================================================
-          SECTION 11 — OUR CERTIFICATIONS (MATCHING REFERENCE ASSETS)
+          SECTION 11 — DIRECT PAGE DIRECTORY (SITELINK NAVIGATION)
+          ========================================================================= */}
+      <section className="py-16 bg-[#F9F8F3] border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-gray-200 pb-4">
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-widest text-forest-800">
+                Direct Site Navigation
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-forest-950">
+                Explore Pragati Exim Pages Directly
+              </h2>
+            </div>
+            <Link
+              to="/sitemap"
+              className="inline-flex items-center gap-1.5 text-forest-800 hover:text-forest-950 font-bold text-xs bg-white hover:bg-forest-50 px-4 py-2 rounded-xl transition border border-gray-200 shrink-0"
+            >
+              View Complete Site Directory <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+
+          <nav aria-label="Direct Website Pages" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                title: "USDA Organic Herbal Powders",
+                desc: "Browse 8 certified organic whole-milled herbal powders including Moringa, Ashwagandha, Turmeric, and Shatavari.",
+                url: "/herbal-powders"
+              },
+              {
+                title: "Standardized Botanical Extracts",
+                desc: "Explore 42 HPLC & UV standardized phytochemical extracts including Curcumin 95%, Berberine 97%, and Gymnema.",
+                url: "/botanical-extracts"
+              },
+              {
+                title: "About Pragati Exim & Trade",
+                desc: "Learn about our India-based B2B export division in Surat, Gujarat and our global ingredient supply model.",
+                url: "/about-us"
+              },
+              {
+                title: "Quality & Certifications",
+                desc: "Review GMP, ISO 22000, HACCP, USDA Organic, Halal, Star-K Kosher, and FSSAI compliance standards.",
+                url: "/certifications"
+              },
+              {
+                title: "Global Export Markets",
+                desc: "Check our international shipping corridors, batch documentation (COA, MSDS, TDS), and export logistics.",
+                url: "/export-markets"
+              },
+              {
+                title: "Contact Export Desk",
+                desc: "Request bulk commercial quotes (MOQ 50 KG), batch COAs, and ingredient samples directly from our team.",
+                url: "/contact-us"
+              }
+            ].map((item) => (
+              <Link
+                key={item.url}
+                to={item.url}
+                className="bg-white rounded-2xl p-5 border border-gray-200 hover:border-forest-700 hover:shadow-md transition flex items-center justify-between gap-4 group"
+              >
+                <div className="space-y-1">
+                  <h3 className="font-serif font-bold text-base text-forest-950 group-hover:text-forest-700 transition">
+                    {item.title}
+                  </h3>
+                  <p className="text-xs text-gray-600 leading-relaxed line-clamp-2">
+                    {item.desc}
+                  </p>
+                </div>
+                <ChevronRight className="w-5 h-5 text-amber-500 shrink-0 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            ))}
+          </nav>
+        </div>
+      </section>
+
+      {/* =========================================================================
+          SECTION 12 — OUR CERTIFICATIONS (MATCHING REFERENCE ASSETS)
           ========================================================================= */}
       <CertificationsStrip title="Our Certifications & Quality Standards" showHeader={true} showCta={true} />
 

@@ -71,6 +71,10 @@ export default function BotanicalExtractsPage({ onOpenRfq }) {
         title="Standardized Botanical & Herbal Extracts Exporter India (42 Primary Extracts)"
         description="Explore Pragati Exim's portfolio of 42 standardized botanical extracts including Curcumin 95%, Berberine 97%, Gymnema 75%, Ginkgo, Resveratrol, and Ashwagandha for international B2B buyers."
         canonicalUrl="/botanical-extracts"
+        itemList={{
+          name: "Standardized Botanical Extracts Portfolio",
+          items: BOTANICAL_EXTRACTS.map(p => ({ name: p.name, url: `/botanical-extracts/${p.slug}` }))
+        }}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Botanical Extracts", url: "/botanical-extracts" }

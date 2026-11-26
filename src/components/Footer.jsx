@@ -134,6 +134,7 @@ export default function Footer({ onOpenRfq }) {
           </div>
 
           <div className="flex flex-wrap gap-4 text-xs">
+            <Link to="/sitemap" className="hover:text-ivory-100 transition">Site Directory</Link>
             <Link to="/privacy-policy" className="hover:text-ivory-100 transition">Privacy Policy</Link>
             <Link to="/terms-and-conditions" className="hover:text-ivory-100 transition">Terms & Conditions</Link>
           </div>

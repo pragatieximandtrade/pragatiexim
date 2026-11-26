@@ -57,6 +57,7 @@ export default function ProductDetail({ onOpenRfq }) {
         title={`${product.name} (${product.botanicalName || 'Botanical Ingredient'}) Exporter India`}
         description={`Source bulk ${product.name} (${product.botanicalName}) from Pragati Exim & Trade, India. ${product.description}`}
         canonicalUrl={canonicalUrl}
+        ogImage={product.image}
         product={product}
         breadcrumbs={[
           { name: "Home", url: "/" },

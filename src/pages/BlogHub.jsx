@@ -11,6 +11,10 @@ export default function BlogHub() {
         title="B2B Sourcing Guides & Technical Resources"
         description="Comprehensive technical and procurement guides for international B2B buyers sourcing herbal powders and standardized botanical extracts from India."
         canonicalUrl="/resources"
+        itemList={{
+          name: "B2B Sourcing Guides & Technical Resources",
+          items: BLOGS.map(b => ({ name: b.title, url: `/resources/${b.slug}` }))
+        }}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Resources", url: "/resources" }

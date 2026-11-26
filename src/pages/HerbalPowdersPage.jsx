@@ -20,6 +20,10 @@ export default function HerbalPowdersPage({ onOpenRfq }) {
         title="USDA Organic Herbal Powders Exporter India"
         description="Explore Pragati Exim's USDA Organic Certified herbal powders including Moringa, Shatavari, Turmeric, Ashwagandha, and Psyllium Husk milled for international B2B buyers."
         canonicalUrl="/herbal-powders"
+        itemList={{
+          name: "USDA Organic Herbal Powders Portfolio",
+          items: HERBAL_POWDERS.map(p => ({ name: p.name, url: `/herbal-powders/${p.slug}` }))
+        }}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Herbal Powders", url: "/herbal-powders" }
