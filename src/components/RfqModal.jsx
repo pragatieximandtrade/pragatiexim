@@ -1,24 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { X, Send, CheckCircle2, ShieldCheck, Package } from 'lucide-react';
-import { ALL_PRODUCTS, HERBAL_POWDERS, BOTANICAL_EXTRACTS } from '../data/products';
+import { X, Send, CheckCircle2, ShieldCheck, Loader2, AlertCircle } from 'lucide-react';
+import { HERBAL_POWDERS, BOTANICAL_EXTRACTS } from '../data/products';
 import { COMPANY } from '../data/company';
+import { submitInquiry } from '../utils/submitInquiry';
+
+const INITIAL_FORM_STATE = {
+  name: '',
+  company: '',
+  email: '',
+  country: '',
+  phone: '',
+  category: 'Botanical Extracts',
+  product: BOTANICAL_EXTRACTS[0]?.name || '',
+  quantity: '50 KG (Standard Sample / Trial MOQ)',
+  destinationPort: '',
+  message: ''
+};
 
 export default function RfqModal({ isOpen, onClose, initialProduct = null, initialType = 'quote' }) {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    country: '',
-    phone: '',
-    category: 'Botanical Extracts',
-    product: '',
-    quantity: '50 KG',
-    destinationPort: '',
-    message: ''
-  });
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [botcheck, setBotcheck] = useState('');
+  const [formData, setFormData] = useState(INITIAL_FORM_STATE);
 
   useEffect(() => {
+    setErrorMsg('');
     if (initialProduct) {
       setFormData(prev => ({
         ...prev,
@@ -28,20 +35,37 @@ export default function RfqModal({ isOpen, onClose, initialProduct = null, initi
     } else {
       setFormData(prev => ({
         ...prev,
-        product: prev.product || (HERBAL_POWDERS[0]?.name || '')
+        product: prev.product || (BOTANICAL_EXTRACTS[0]?.name || '')
       }));
     }
   }, [initialProduct, isOpen]);
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg('');
+
+    try {
+      await submitInquiry({
+        formData,
+        inquiryType: initialType === 'sample' ? 'Product Sample Request' : 'Commercial Export Quote',
+        source: 'RFQ Modal Popup',
+        botcheck
+      });
+      setSubmitted(true);
+      setFormData(INITIAL_FORM_STATE);
+    } catch (err) {
+      setErrorMsg(err.message || `Submission failed. Please email ${COMPANY.email.primary} directly.`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setErrorMsg('');
     onClose();
   };
 
@@ -203,12 +227,38 @@ export default function RfqModal({ isOpen, onClose, initialProduct = null, initi
                 ></textarea>
               </div>
 
+              {errorMsg && (
+                <div className="p-3 rounded-xl bg-red-500/15 border border-red-400/40 text-red-200 text-xs flex items-start gap-2">
+                  <AlertCircle className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+                  <span>{errorMsg}</span>
+                </div>
+              )}
+
+              <input
+                type="checkbox"
+                name="botcheck"
+                checked={Boolean(botcheck)}
+                onChange={(e) => setBotcheck(e.target.checked ? '1' : '')}
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+
               <div className="pt-2">
                 <button
                   type="submit"
-                  className="w-full py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-forest-950 font-extrabold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm"
+                  disabled={submitting}
+                  className="w-full py-3.5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-forest-950 font-extrabold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm"
                 >
-                  <Send className="w-4 h-4 fill-forest-950" /> SUBMIT COMMERCIAL INQUIRY
+                  {submitting ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" /> SENDING INQUIRY...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 fill-forest-950" /> SUBMIT COMMERCIAL INQUIRY
+                    </>
+                  )}
                 </button>
               </div>
 

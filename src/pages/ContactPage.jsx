@@ -1,27 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Clock, Globe } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle2, ShieldCheck, Clock, Loader2, AlertCircle } from 'lucide-react';
 import SEO from '../components/SEO';
 import { COMPANY } from '../data/company';
 import { HERBAL_POWDERS, BOTANICAL_EXTRACTS, ALL_PRODUCTS } from '../data/products';
+import { submitInquiry } from '../utils/submitInquiry';
+
+const INITIAL_CONTACT_STATE = {
+  name: '',
+  company: '',
+  email: '',
+  country: '',
+  phone: '',
+  category: 'Botanical Extracts',
+  product: BOTANICAL_EXTRACTS[0]?.name || '',
+  quantity: '50 KG (Standard Sample / Trial MOQ)',
+  destinationPort: '',
+  message: ''
+};
 
 export default function ContactPage() {
   const [searchParams] = useSearchParams();
   const productParam = searchParams.get('product') || '';
-  
+
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    country: '',
-    phone: '',
-    category: 'Botanical Extracts',
-    product: '',
-    quantity: '50 KG (Standard Sample / Trial MOQ)',
-    destinationPort: '',
-    message: ''
-  });
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [botcheck, setBotcheck] = useState('');
+  const [formData, setFormData] = useState(INITIAL_CONTACT_STATE);
 
   useEffect(() => {
     if (productParam) {
@@ -45,9 +51,25 @@ export default function ContactPage() {
     ? HERBAL_POWDERS
     : BOTANICAL_EXTRACTS;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg('');
+
+    try {
+      await submitInquiry({
+        formData,
+        inquiryType: 'Contact Page Commercial Inquiry',
+        source: 'Contact Export Desk Page',
+        botcheck
+      });
+      setSubmitted(true);
+      setFormData(INITIAL_CONTACT_STATE);
+    } catch (err) {
+      setErrorMsg(err.message || `Submission failed. Please email ${COMPANY.email.primary} directly.`);
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -235,12 +257,38 @@ export default function ContactPage() {
                   ></textarea>
                 </div>
 
+                {errorMsg && (
+                  <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs flex items-start gap-2">
+                    <AlertCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                    <span>{errorMsg}</span>
+                  </div>
+                )}
+
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  checked={Boolean(botcheck)}
+                  onChange={(e) => setBotcheck(e.target.checked ? '1' : '')}
+                  className="hidden"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-forest-950 font-extrabold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm"
+                    disabled={submitting}
+                    className="w-full py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-60 disabled:cursor-not-allowed text-forest-950 font-extrabold rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm"
                   >
-                    <Send className="w-4 h-4 fill-forest-950" /> Send Inquiry / Request a Quote
+                    {submitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" /> Sending Commercial Inquiry...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 fill-forest-950" /> Send Inquiry / Request a Quote
+                      </>
+                    )}
                   </button>
                 </div>
               </form>
