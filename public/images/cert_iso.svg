@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Scalloped Outer Badge -->
+  <path d="M 100,10 L 109,15 L 118,12 L 125,20 L 135,20 L 140,29 L 150,32 L 152,42 L 161,48 L 160,58 L 168,66 L 164,76 L 170,86 L 163,94 L 167,104 L 158,111 L 160,121 L 149,126 L 148,137 L 137,139 L 133,149 L 122,148 L 116,157 L 106,153 L 98,160 L 90,154 L 81,158 L 76,150 L 66,151 L 62,141 L 52,139 L 50,129 L 40,124 L 41,114 L 32,107 L 35,97 L 29,88 L 35,79 L 31,69 L 39,61 L 38,51 L 48,46 L 50,36 L 60,33 L 64,24 L 74,23 L 80,15 L 89,17 Z" fill="#292D32"/>
+  <circle cx="100" cy="85" r="68" fill="#ffffff" stroke="#292D32" stroke-width="4"/>
+  
+  <!-- Top & Bottom Arc Text -->
+  <path id="topArcIso" d="M 42,85 A 58,58 0 0,1 158,85" fill="none"/>
+  <text font-family="sans-serif" font-weight="900" font-size="12" fill="#292D32" letter-spacing="3"><textPath href="#topArcIso" startOffset="50%" text-anchor="middle">CERTIFIED</textPath></text>
+  
+  <!-- Stars -->
+  <text x="100" y="52" font-family="sans-serif" font-size="10" fill="#292D32" text-anchor="middle">★  ★  ★</text>
+  
+  <path id="botArcIso" d="M 42,85 A 58,58 0 0,0 158,85" fill="none"/>
+  <text font-family="sans-serif" font-weight="900" font-size="12" fill="#292D32" letter-spacing="3"><textPath href="#botArcIso" startOffset="50%" text-anchor="middle">CERTIFIED</textPath></text>
+
+  <!-- Banner Ribbon Across Center -->
+  <rect x="15" y="70" width="170" height="34" fill="#292D32" rx="4"/>
+  <polygon points="15,70 5,87 15,104" fill="#1A1C1E"/>
+  <polygon points="185,70 195,87 185,104" fill="#1A1C1E"/>
+  <text x="100" y="94" font-family="sans-serif" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle" letter-spacing="2">ISO 22000</text>
+</svg>

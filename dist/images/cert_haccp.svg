@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="92" fill="#ffffff" stroke="#292D32" stroke-width="6"/>
+  <circle cx="100" cy="100" r="76" fill="none" stroke="#292D32" stroke-width="3"/>
+  <circle cx="100" cy="100" r="54" fill="none" stroke="#292D32" stroke-width="4"/>
+  
+  <path id="haccpTop" d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="13" fill="#292D32" letter-spacing="1"><textPath href="#haccpTop" startOffset="50%" text-anchor="middle">Hazard-Analysis</textPath></text>
+  
+  <path id="haccpBot" d="M 172,100 A 72,72 0 0,1 28,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="11" fill="#292D32" letter-spacing="1"><textPath href="#haccpBot" startOffset="50%" text-anchor="middle">Critical-Control-Point</textPath></text>
+  
+  <text x="100" y="112" font-family="sans-serif" font-weight="900" font-size="34" fill="#292D32" text-anchor="middle" letter-spacing="2">HACCP</text>
+</svg>

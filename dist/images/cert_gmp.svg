@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Double Circle -->
+  <circle cx="100" cy="100" r="92" fill="#ffffff" stroke="#292D32" stroke-width="6"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#292D32" stroke-width="2"/>
+  
+  <!-- Outer Arc Texts -->
+  <path id="gmpTop" d="M 28,100 A 72,72 0 0,1 172,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="12.5" fill="#292D32" letter-spacing="1.5"><textPath href="#gmpTop" startOffset="50%" text-anchor="middle">Good Manufacturing Practice</textPath></text>
+  
+  <path id="gmpBot" d="M 172,100 A 72,72 0 0,1 28,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="12" fill="#292D32" letter-spacing="2"><textPath href="#gmpBot" startOffset="50%" text-anchor="middle">★ Certification ★</textPath></text>
+  
+  <!-- Inner Solid Circle -->
+  <circle cx="100" cy="100" r="54" fill="#292D32"/>
+  <text x="100" y="98" font-family="sans-serif" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" letter-spacing="1">GMP</text>
+  <text x="100" y="118" font-family="sans-serif" font-weight="700" font-size="15" fill="#ffffff" text-anchor="middle" letter-spacing="1">Quality</text>
+</svg>

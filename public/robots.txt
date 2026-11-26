@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://pragatiexim.com/sitemap.xml
+Sitemap: https://www.pragatiexim.com/sitemap.xml

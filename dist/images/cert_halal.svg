@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="92" fill="#292D32"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+  
+  <path id="halalTop" d="M 30,100 A 70,70 0 0,1 170,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" letter-spacing="1"><textPath href="#halalTop" startOffset="50%" text-anchor="middle">HALAL INDIA • हलाल इंडिया</textPath></text>
+  
+  <path id="halalBot" d="M 170,100 A 70,70 0 0,1 30,100" fill="none"/>
+  <text font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" letter-spacing="1"><textPath href="#halalBot" startOffset="50%" text-anchor="middle">حلال الهند • Halal India</textPath></text>
+  
+  <!-- Arabic Halal Calligraphy -->
+  <text x="100" y="88" font-family="serif" font-weight="bold" font-size="34" fill="#ffffff" text-anchor="middle">حلال</text>
+  <text x="100" y="112" font-family="sans-serif" font-weight="900" font-size="16" fill="#ffffff" text-anchor="middle" letter-spacing="1">halal</text>
+  <text x="100" y="126" font-family="sans-serif" font-weight="700" font-size="9" fill="#ffffff" text-anchor="middle" letter-spacing="2">INDIA</text>
+  <!-- Hands emblem graphic line -->
+  <path d="M 70,135 Q 100,145 130,135" fill="none" stroke="#ffffff" stroke-width="2"/>
+</svg>

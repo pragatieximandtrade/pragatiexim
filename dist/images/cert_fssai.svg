@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <g transform="translate(10, 20)">
+    <!-- Blue line underneath -->
+    <line x1="10" y1="100" x2="210" y2="100" stroke="#1D4ED8" stroke-width="4"/>
+    <!-- Orange bar -->
+    <rect x="25" y="86" width="180" height="8" fill="#F97316" rx="2"/>
+    <!-- fssai text -->
+    <text x="20" y="80" font-family="'Playfair Display', Georgia, serif" font-weight="900" font-style="italic" font-size="76" fill="#1D4ED8" letter-spacing="-2">fssai</text>
+    <!-- Green leaf dot on the last 'i' -->
+    <path d="M 188,20 C 170,20 160,35 160,50 C 160,65 175,70 195,65 C 195,45 180,30 188,20 Z" fill="#16A34A"/>
+    <path d="M 175,45 Q 185,40 190,30" fill="none" stroke="#ffffff" stroke-width="2"/>
+  </g>
+</svg>

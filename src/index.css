@@ -1,53 +1,52 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
-  html {
-    color-scheme: light;
-  }
-  
   body {
-    @apply bg-brand-ivory-50 text-brand-charcoal-900 font-sans antialiased;
-    background-color: #fdfcf9;
+    background-color: #FDFCF9;
+    color: #121816;
+    font-family: 'Inter', 'Manrope', 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, .font-serif-heading {
+  h1, h2, h3, .font-serif {
     font-family: 'Playfair Display', Georgia, serif;
     letter-spacing: -0.015em;
   }
 }
 
-/* Hide scrollbar utility for clean touch/horizontal scrolling */
-.no-scrollbar::-webkit-scrollbar {
-  display: none !important;
-  width: 0 !important;
-  height: 0 !important;
+/* Custom Scrollbar for horizontal sliders */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none !important;  /* IE and Edge */
-  scrollbar-width: none !important;  /* Firefox */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #F8F6F0;
+  border-radius: 9999px;
 }
 
-/* Glassmorphic and subtle depth utilities */
-.glass-nav {
-  background: rgba(253, 252, 249, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C7C0B0;
+  border-radius: 9999px;
 }
 
-.glass-dark {
-  background: rgba(13, 43, 32, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1B523F;
 }
 
-.spice-gradient-overlay {
-  background: linear-gradient(180deg, rgba(7, 24, 18, 0.82) 0%, rgba(13, 43, 32, 0.9) 100%);
+/* Hide scrollbar completely while maintaining scroll functionality */
+.no-scrollbar::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
 }
 
-.spice-pattern-bg {
-  background-image: radial-gradient(rgba(217, 119, 6, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+.no-scrollbar,
+.scrollbar-none {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

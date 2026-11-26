@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer 5-point star outline -->
+  <polygon points="100,15 125,72 188,72 137,109 156,168 100,132 44,168 63,109 12,72 75,72" fill="none" stroke="#292D32" stroke-width="8"/>
+  <polygon points="100,28 121,75 174,75 131,106 147,155 100,125 53,155 69,106 26,75 79,75" fill="#ffffff" stroke="#292D32" stroke-width="4"/>
+  
+  <!-- Letter K -->
+  <text x="100" y="108" font-family="sans-serif" font-weight="900" font-size="34" fill="#292D32" text-anchor="middle">K</text>
+  
+  <!-- Subtext -->
+  <text x="100" y="186" font-family="sans-serif" font-weight="900" font-size="12" fill="#292D32" text-anchor="middle">Star-K Kosher Certification</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="96" fill="#ffffff" stroke="#0D3B2E" stroke-width="4"/>
+  <circle cx="100" cy="100" r="90" fill="#0D3B2E"/>
+  <circle cx="100" cy="100" r="82" fill="#ffffff"/>
+  <circle cx="100" cy="100" r="74" fill="#5C3A21"/>
+  <text x="100" y="72" font-family="sans-serif" font-weight="900" font-size="28" fill="#ffffff" text-anchor="middle" letter-spacing="2">USDA</text>
+  <path d="M 32,100 A 68,68 0 0,0 168,100 Z" fill="#0D3B2E"/>
+  <text x="100" y="132" font-family="sans-serif" font-weight="900" font-size="22" fill="#ffffff" text-anchor="middle" letter-spacing="2">ORGANIC</text>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="#ffffff" stroke-width="3"/>
+</svg>
